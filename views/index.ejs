@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+<main>
+    <section class="home">
+        <div class="showcase">
+            <h2>
+              <span class="heading">There is no sincerer love than the love of fruits <br> and vegetables in a vegan life.</span>
+            </h2>
+            <div>
+                <a href="/all-posts">
+                    <button>move to blog</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="posts">
+        <div class="post-list">
+            <% for(let i= 0; i < 6; i++) { %>
+                <div class="post">
+                    <div class="image">
+                        <img class="list-image" src="<%= post[i].imgurl %>" alt="">
+                    </div>
+                    <small>posted on: <%= post[i].date %></small>
+                    <a href="/post/<%= post[i]._id %>">
+                        <h3>  <span class="each-heading">  <%= post[i].title %>  </span>  </h3>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </section>
+    <!------------------>
+    <section class="newsletter">
+        <div class="news-list">
+            <div class="news-img">
+                <img class="news-img-tag" src="/public/9.jpg" alt="">
+            </div>
+            <div class="email-list">
+                <h4>Get a new diet Tip each and every Week.</h4>
+                <form method="POST" action="/email/list"  class="news-form">
+                    <input name="email" type="email" placeholder="Your email address" required>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<%- include('partials/footer.ejs') %>

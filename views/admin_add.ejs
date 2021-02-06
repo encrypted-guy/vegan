@@ -1,0 +1,20 @@
+<%- include('partials/adminheader.ejs') %>
+    <div class="admin-all">
+        <h2> <span class="admin-heading"> ADD POST </span> </h2>
+        <div class="add-post">
+            <form class="admin-form" action="/admin/add" method="POST" enctype="multipart/form-data">
+                <div>
+                    <label for="file">choose an image</label>
+                    <input class="input-feilds" type="file" name="file" id="file" accept="image/*" required>
+                </div>
+                <div>
+                    <input name="title" id="title" class="input-feilds" type="text"  placeholder="post title" required>
+                </div>
+                <div>
+                    <textarea name="description" id="description" class="input-feilds"  cols="30" rows="10"></textarea>
+                </div>
+                <button class="input-feilds admin-btn"> SUBMIT </button>
+            </form>
+        </div>
+    </div>
+<%- include('partials/adminfooter.ejs') %>

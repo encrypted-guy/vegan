@@ -1,0 +1,12 @@
+<%- include('partials/adminheader.ejs') %>
+<div class="fav-list">
+    <%  contact.forEach(function(contact) { %>
+    <div class="fav-item">
+        <p> <b>fullname:</b>  <%= contact.name %></p>
+        <p> <b>EmailMAIL: </b> <%= contact.Email %></p>
+        <p> <b>contacted on</b> <%= contact.date %></p>
+        <p> <b>description</b> <%= contact.description %></p>
+    </div>
+    <% }); %>
+</div>
+<%- include('partials/adminfooter.ejs') %>

@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+    <section class="posts">
+        <div class="post-list">
+            <% for(let i= 0; i < posts.length; i++) { %>
+                <div class="post">
+                    <div class="image">
+                        <img class="list-image" src="<%= posts[i].imgurl %>" alt="">
+                    </div>
+                    <small><%= posts[i].date %></small>
+                    <a href="/post/<%= posts[i]._id %>">
+                        <h3>  <span class="each-heading">  <%= posts[i].title %>  </span>  </h3>
+                    </a>
+                </div>
+            <% }  %>
+        </div>
+    </section>
+
+</main>
+
+<%- include('partials/footer.ejs') %>

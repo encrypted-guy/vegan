@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+
+    <div class="each-protcat">
+        <div class="each-post">
+            <h1><span class="each-heading"> <%= post.title %> </span>  </h1> <span class="each-date"><small>posted on: <%= post.date %> </small></span>
+            <div class="each-img">
+                <img class="each-img-tag" src="<%= post.imgurl %>">
+            </div>
+            <p>
+                <%= post.description %>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="fav-protact">
+        <div class="fav-list">
+            <% for(let i= 0; i < 3; i++) { %>
+                <div class="fav-item">
+                    <img class="fav-item-tag" src="<%= all_posts[i].imgurl %>" alt="">
+                    <a href="/post/<%= all_posts[i]._id %>">    
+                        <h2> <span class="hover-fav"> <%= all_posts[i].title %> </span></h2>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+</main>
+
+<%- include('partials/footer.ejs') %>

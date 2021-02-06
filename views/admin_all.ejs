@@ -1,0 +1,33 @@
+<%- include('partials/adminheader.ejs') %>
+
+            <div class="admin-all">
+                <h2> <span class="admin-heading"> ALL POSTS </span> </h2>
+                <div class="all-post-list">
+                    <div class="fav-protact">
+
+                        <div class="fav-list">
+
+                            <% post.forEach(function(post) { %>
+
+                                <div class="fav-item">
+                                    <img class="fav-item-tag" src="<%= post.imgurl %>" alt="">
+                                    <a href="">    
+                                        <h2> <span class="hover-fav"> <%= post.title %> </span></h2>
+                                    </a>
+                                    <div class="admin-btn-list">
+                                        <a href="/admin/edit/<%= post._id %>">
+                                            <button class="edit-btn">EDIT</button>
+                                        </a>
+                                        <a href="/admin/delete/<%= post._id %>">
+                                            <button class="delete-btn">DELETE</button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            <% }); %>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+<%- include('partials/adminfooter.ejs') %>

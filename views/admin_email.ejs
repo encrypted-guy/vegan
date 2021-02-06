@@ -1,0 +1,10 @@
+<%- include('partials/adminheader.ejs') %>
+<div class="fav-list">
+    <%  email.forEach(function(email) { %>
+    <div class="fav-item">
+        <h2 style="font-family:Arial, Helvetica, sans-serif"> <span class="hover-fav"> <%= email.email %></span></h2>
+        <small> listed on : <%= email.time %> </small>
+    </div>
+    <% }); %>
+</div>
+<%- include('partials/adminfooter.ejs') %>

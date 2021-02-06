@@ -1,0 +1,16 @@
+<%- include('partials/adminheader.ejs') %>
+    <div class="admin-all">
+        <h2> <span class="admin-heading"> EDIT POST | <small>cant change image</small> </span> </h2>
+        <div class="add-post">
+            <form class="admin-form" action="" method="POST">
+                <div>
+                    <input name="title" class="input-feilds" type="text"  placeholder="post title" required>
+                </div>
+                <div>
+                    <textarea name="discription" class="input-feilds"  cols="30" rows="10"></textarea>
+                </div>
+                <button class="input-feilds admin-btn"> SUBMIT </button>
+            </form>
+        </div>
+    </div>
+<%- include('partials/adminfooter.ejs') %>

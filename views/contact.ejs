@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') %>
+<main>
+        
+    <section class="contact-all">
+
+        <h2> <span class="contactus-heading"> Contact Us </span></h2>
+
+        <form class="contact-form" action="/contact" method="POST">
+            <div>
+                <input name="name" class="input-feilds" type="text"  placeholder="Full Name" required>
+            </div>
+            <div>
+                <input name="Email" class="input-feilds" type="email"   placeholder="E-MAIL" required>
+            </div>
+            <div>
+                <textarea name="description" class="input-feilds"  cols="30" rows="10"></textarea>
+            </div>
+            <button class="input-feilds add-btn"> SUBMIT </button>
+        </form>
+    </section>
+
+
+    <div class="fav-protact">
+        <div class="fav-list">
+            <% for(let i= 0; i < 3; i++) { %>
+                <div class="fav-item">
+                    <img class="fav-item-tag" src="<%= all_posts[i].imgurl %>" alt="">
+                    <a href="/post/<%= all_posts[i]._id %>">    
+                        <h2> <span class="hover-fav"> <%= all_posts[i].title %> </span></h2>
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+</main>
+<%- include('partials/footer.ejs') %>

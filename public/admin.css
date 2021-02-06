@@ -1,0 +1,158 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    margin: 0 auto; 
+    padding: 0 5vw;
+}
+.admin {
+    width: 80%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.admin-menu {
+    flex-basis: 25%;
+    text-align: center;
+    margin: 50px;
+}
+.admin-menu ul li {
+    list-style: none;
+    border: 2px solid #9beec1;
+    background-color: #9beec1;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+.admin-menu ul li a {
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+
+}
+.admin-all {
+    flex-basis: 75%;
+}
+@media screen and (max-width: 650px){
+    .admin {
+        flex-direction: column;
+    }
+    .admin-menu ul li {
+        padding: 10px 100px;
+    }
+}
+.admin-all {
+    padding: 20px;
+}
+.admin-all h2 {
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+}
+.admin-heading {
+    padding: 0 30px;
+    background: rgb(155,238,193);
+    background: linear-gradient(0deg, rgba(155,238,193,1) 47%, rgba(155,238,193,0) 47%, rgba(0,212,255,0) 100%);
+}
+.count-posts {
+    margin: 50px;
+    text-align: center;
+    padding: 50px;
+    background-color: #F49FB6;
+    font-size: 2rem;
+}
+
+.add-post {
+    padding: 10px;
+    margin: 50px 0;
+    background-color: #F49FB6;
+}
+.admin-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.input-feilds {
+    width: 100%;
+    margin: 20px 0;
+    padding: 12px 24px;
+    font-family: 'Inconsolata', monospace;
+    outline: none;
+}
+
+.admin-btn {
+    background-color: #9beec1;
+    padding: 5px;
+    color: black;
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+.fav-item-tag {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+.fav-protact {
+    width: 100%;
+    margin: 20px 0;
+    
+}
+.fav-list {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.fav-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px 20px;
+    background-color: #F49FB6;
+}
+.fav-item a {
+    text-decoration: none;
+    color:  #000;
+   
+}
+.fav-item a h2 {
+    padding: 0 20px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+
+}
+label {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+}
+.hover-fav{
+    background: linear-gradient(to right, #9beec1 50%, #F49FB6 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s cubic-bezier(0.49, 0.99, 0.79, 1.04) 0s;
+}
+.hover-fav:hover {
+    background-position: left bottom;
+}
+.admin-btn-list button {
+    padding: 5px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.edit-btn {
+    background-color: chartreuse;
+}
+.delete-btn {
+    background-color: crimson;
+}
